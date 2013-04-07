@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% load cms_tags %}
+
+
+
+{% block base_content %}
+
+{% include "menu.html" %}
+
+	<div id="profilePic">
+		{% placeholder "Pete's Face Goes Here" %}
+	</div>
+  
+  <div id="bio">
+  {% placeholder "Bio" %}
+  <p>bio goes here</p>
+  </div>
+  
+  <div id="resume">
+  {% placeholder "Resume" %}
+  <p>resume goes here</p>
+  </div>
+
+
+{% endblock %}
+
+
+
+
+
+

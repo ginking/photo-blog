@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% load cms_tags %}
+{% load placeholder_tags %}
+
+{% block base_content %}
+	{% for post in posts %}
+		<h2>{{ post.title }}</h2>
+		<p>{{ post.post_date }}</p>
+		<img src="{{ post.featured_image.url }}">
+		{% render_placeholder post.content_area %}
+	{% endfor %}
+{% endblock %}
